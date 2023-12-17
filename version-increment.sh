@@ -16,7 +16,7 @@ if [[ -z "${current_version:-}" ]] ; then
     echo "🛑 Environment variable 'current_version' is unset or empty" 1>&2
     input_errors='true'
 elif [[ -z "$(echo "${current_version}" | ${grep} -P "${pcre_master_ver}")" ]] ; then
-    echo "🛑 Environment variable 'current_version' is not a valid normal version (M.m.p)" 1>&2
+    echo "🛑 Environment variable 'current_version' (${current_version}) is not a valid normal version (M.m.p)" 1>&2
     input_errors='true'
 fi
 
